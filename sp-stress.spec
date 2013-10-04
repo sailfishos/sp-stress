@@ -41,5 +41,4 @@ rm -rf %{buildroot}
 %{_bindir}/cpuload
 %{_bindir}/run_secs
 %{_bindir}/flash_eater
-%{_mandir}/man1/*.1.gz
 %doc doc/README COPYING 
