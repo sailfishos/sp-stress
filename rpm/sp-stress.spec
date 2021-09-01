@@ -1,10 +1,9 @@
 Name: sp-stress
-Version: 0.2.1
+Version: 0.2.2
 Release: 1
 Summary: Tools for creating stress test loads
-Group: Development/Tools
 License: GPLv2+
-URL: https://github.com/mer-tools/sp-stress
+URL: https://github.com/sailfishos/sp-stress
 Source: %{name}-%{version}.tar.gz
 
 %description
@@ -19,20 +18,17 @@ Source: %{name}-%{version}.tar.gz
      period, after which it will be terminated.
 
 %prep
-%setup -q
+%autosetup
 
 %build
-make
+%make_build
 
 %install
-rm -rf %{buildroot}
-make install DESTDIR=%{buildroot}
-
-%clean
-rm -rf %{buildroot}
+%make_install
 
 %files
 %defattr(-,root,root,-)
+%license COPYING
 %{_bindir}/ioload
 %{_bindir}/swpload
 %{_bindir}/memload
@@ -40,4 +36,4 @@ rm -rf %{buildroot}
 %{_bindir}/run_secs
 %{_bindir}/flash_eater
 %{_mandir}/man1/*.1.gz
-%doc doc/README COPYING
+%doc doc/README
