@@ -297,7 +297,7 @@ int main(int argc, const char* argv[])
    const char *name;
    unsigned int load = 0;
 
-   printf ("\nCPU load generator, build %s %s.\n", __DATE__, __TIME__);
+   printf ("\nCPU load generator\n");
    printf ("Copyright (C) 2006,2008 Nokia Corporation.\n");
    
    if (parse_args(argc, argv, &load))
