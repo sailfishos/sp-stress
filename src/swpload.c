@@ -453,7 +453,7 @@ int main(const int argc, const char* argv[])
   this_epoch = time(NULL);
   this_pid   = getpid();
   pagesize   = (unsigned)getpagesize();
-  printf ("stress paging/swapping load generator, build %s %s\n", __DATE__, __TIME__);
+  printf ("stress paging/swapping load generator\n");
 
   /* validate parameters in general */
   if (5 != argc)
